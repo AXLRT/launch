@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CRAMMER: coming soon</title>
+    <meta name="description" content="Crammer is an e-commerce bookstore.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <div id="hero">
+      <div class="wrap">
+         <div class="brand">
+           <p class="bower-logo"><i class="fa fa-book fa-5x"></i><h1>Crammer</h1></p>
+         </div>
+      </div>
+    </div>
+    <div class="content">
+        <div class="wrap">
+          <!--add mail chimp right here-->
+        </div>
+    </div>
+    <div id="footer">
+      <div class="wrap">
+        <p class="license">&copy; 2013 Crammer Inc. All Rights Reserved.</p>
+      </div>
+    </div>
+    <script>
+    /*! Normalized address bar hiding for iOS & Android (c) @scottjehl MIT License */
+    (function (win){
+      var doc = win.document;
+
+      // If there's a hash, or addEventListener is undefined, stop here
+      if (!location.hash && win.addEventListener) {
+        //scroll to 1
+        window.scrollTo(0, 1);
+        var scrollTop = 1;
+        var getScrollTop = function () {
+          return win.pageYOffset || doc.compatMode === "CSS1Compat" && doc.documentElement.scrollTop || doc.body.scrollTop || 0;
+        };
+
+        //reset to 0 on bodyready, if needed
+        var bodycheck = setInterval(function(){
+          if (doc.body) {
+            clearInterval(bodycheck);
+            scrollTop = getScrollTop();
+            win.scrollTo(0, scrollTop === 1 ? 0 : 1);
+          }
+        }, 15);
+
+        win.addEventListener("load", function () {
+          setTimeout(function () {
+            //at load, if user hasn't scrolled more than 20 or so...
+            if (getScrollTop() < 20) {
+              //reset to hide addr bar at onload
+              win.scrollTo(0, scrollTop === 1 ? 0 : 1);
+            }
+          }, 0);
+        });
+      }
+    }(this));
+    </script>
+  </body>
+</html>
