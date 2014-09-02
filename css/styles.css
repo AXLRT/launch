@@ -2,7 +2,6 @@ body {
   background-color: #f6efdb;
   font-family: "Libre Baskerville", serif;
   padding: 5em 0; }
-
 p {
   font-size: 18px;
   line-height: 34px;
@@ -428,3 +427,7 @@ p {
     border: 1px dashed #dddddd;
     margin-top: -1px;
     margin-bottom: -1px; }
+
+.logo {
+  color: #3B94D9;
+}
